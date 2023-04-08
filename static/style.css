@@ -1,0 +1,75 @@
+/* variable css */
+:root {
+    --off-black: #060606;
+    --grey: #666666;
+    --dark-grey: #141414;
+    --off-white: #cecece;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #b00000;
+    --light-red: #dda4a4;
+}
+
+/* Reset all web parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.red {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.form {
+    width: 40%;
+    margin: auto auto;
+    margin-top: 10vh;
+}
+
+.heading {
+    text-align: center;
+    margin-block: 5vh;
+}
+
+.scanning-button {
+    display: flex;
+    justify-content: center;
+}
+
+.scanning-btn {
+    padding: 8px 12px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.details {
+    width: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 5vh auto;
+    background-color: #e3e3e3;
+    color: var(--black);
+}
+
+.details p {
+    margin: 0px;
+}
