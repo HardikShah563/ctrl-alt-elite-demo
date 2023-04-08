@@ -1,4 +1,6 @@
 {% from 'navbar.html' import navbar %}
+{% from 'OSDetails.html' import OSDetails %}
+{% from 'AllFiles.html' import AllFiles %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,11 +29,11 @@
 <body>
     {{ navbar() }}
 
-    <h1 class="heading">Start Scanning your PC</h1>
-    
-    <div class="scanning-button">
-        <a class="scanning-link" href="{{ url_for('scan') }}">GO</a>
-    </div>
+    <h1 class="heading">Results</h1>
+
+    {{ OSDetails(osDetails, len1) }}
+
+    {{ AllFiles(allFiles, len2) }}
 </body>
 
 </html>

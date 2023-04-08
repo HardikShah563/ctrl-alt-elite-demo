@@ -15,9 +15,7 @@ allFiles = []
 
 @app.route('/')
 def home(): 
-    osDetails = os_details()
-    allFiles = all_files()
-    return render_template('home.html',len1 = len(osDetails), osDetails = osDetails, allFiles = allFiles, len2 = len(allFiles))
+    return render_template('home.html')
 
 @app.route('/login')
 def login(): 
@@ -27,10 +25,11 @@ def login():
 def register(): 
     return render_template('register.html')
 
+@app.route('/scan')
 def scan(): 
-    # osDetails = os_details()
-    return render_template('home.html', osDetails = osDetails)
-    print("Hello world")
+    osDetails = os_details()
+    allFiles = all_files()
+    return render_template('scan.html', len1 = len(osDetails), osDetails = osDetails, allFiles = allFiles, len2 = len(allFiles))
 
 if __name__ == '__main__': 
     app.run(debug = True)
