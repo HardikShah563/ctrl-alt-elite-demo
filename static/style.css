@@ -77,3 +77,9 @@ body {
 .details p {
     margin: 0px;
 }
+
+@media (max-width: 800px) {
+    .details {
+        width: 95%;
+    }
+}

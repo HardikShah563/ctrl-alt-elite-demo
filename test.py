@@ -1,9 +1,7 @@
+import os
 import platform
 import psutil
-
 import subprocess
-
-
 
 # print the computer details
 def os_details(): 
@@ -35,9 +33,7 @@ def os_details():
     details.append(detail)
     detail = "Disk: " + str(disk_total) + "GB (Used: " + str(disk_used) + "GB, Free: " + str(disk_free) + "GB)"
     details.append(detail)
-
     return details
-
 
 # Run the wmic command to get the list of installed software and their versions
 def all_files(): 
@@ -56,12 +52,32 @@ def all_files():
             print(f"{name} - {version}")
             allFiles.append(f"{name} - {version}")
     return allFiles
-            
 
-def write_txt():
-    with open("software_list.txt", "w") as f:
-        software_info = [line.strip().rsplit('  ', 1) for line in lines]
-        for info in software_info:
-            if len(info) >= 2:
-                name, version = info
-                f.write(f"{name} - {version}\n")
+# def write_txt():
+#     with open("software_list.txt", "w") as f:
+#         software_info = [line.strip().rsplit('  ', 1) for line in lines]
+#         for info in software_info:
+#             if len(info) >= 2:
+#                 name, version = info
+#                 f.write(f"{name} - {version}\n")
+
+def network_config(): 
+    print("Hello")
+    # Extract network configuration and write to TXT file
+    network_config_output = subprocess.check_output('ipconfig /all', shell=True)
+    print(network_config_output.decode('utf-8'))
+    network_config_output = network_config_output.decode('utf-8')
+    return network_config_output
+
+
+
+
+# # Extract network configuration and write to TXT file
+# network_config_output = subprocess.check_output('ipconfig /all', shell=True)
+# # with open('network_config.txt', 'w') as f:
+# #     f.write(network_config_output.decode('utf-8'))
+
+# network_config_output = subprocess.check_output('ipconfig /all', shell=True)
+# network_config_output = network_config_output.decode('utf-8')
+# print(network_config_output)
+# # print(network_config_output.decode('utf-8'))

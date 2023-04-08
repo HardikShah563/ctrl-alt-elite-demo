@@ -29,7 +29,8 @@ def register():
 def scan(): 
     osDetails = os_details()
     allFiles = all_files()
-    return render_template('scan.html', len1 = len(osDetails), osDetails = osDetails, allFiles = allFiles, len2 = len(allFiles))
+    NetworkConfig = network_config()
+    return render_template('scan.html', len1 = len(osDetails), osDetails = osDetails, allFiles = allFiles, len2 = len(allFiles), networkConfig = NetworkConfig)
 
 if __name__ == '__main__': 
     app.run(debug = True)

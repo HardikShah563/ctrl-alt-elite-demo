@@ -1,6 +1,7 @@
 {% from 'navbar.html' import navbar %}
 {% from 'OSDetails.html' import OSDetails %}
 {% from 'AllFiles.html' import AllFiles %}
+{% from 'NetworkConfig.html' import NetworkConfig %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +35,8 @@
     {{ OSDetails(osDetails, len1) }}
 
     {{ AllFiles(allFiles, len2) }}
+
+    {{ NetworkConfig(networkConfig) }}
 </body>
 
 </html>
