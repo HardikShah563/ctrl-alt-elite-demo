@@ -1,0 +1,15 @@
+{% macro vulnerabilities(vulnerabilities_list, num_vulnerabilities) %}
+    <div class="details">
+        <h3>If Vulnerabilities are found in the System: </h3>
+        <br>
+        <ul>
+            {% if num_vulnerabilities > 0 %}
+                {% for vulnerability in vulnerabilities_list %}
+                    <li>{{ vulnerability }}</li>
+                {% endfor %}
+            {% else %}
+                <li>No vulnerabilities found.</li>
+            {% endif %}
+        </ul>
+    </div>
+{% endmacro %}
